@@ -1,10 +1,10 @@
-' # Stethoscope with Pressure Sensor
+# Stethoscope with Pressure Sensor
 
 <a href=".\assets\pictures\Stethoscope_Front_Closed_with_Plugins.jpg" target="_blank" style="float: right; margin-left: 20px;">
   <img src=".\assets\pictures\Stethoscope_Front_Closed_with_Plugins.jpg" style="width: 500px;">
 </a>
 
-This stethoscope pressure solution consists of a sound as well as pressure recorder. For sound the I2S (Inter-Integrated Circuit Sound) bus is used to communicate with the microcontroller. This interf[...]  
+This stethoscope pressure solution consists of a sound as well as pressure recorder. For sound the I2S (Inter-Integrated Circuit Sound) bus is used to communicate with the microcontroller. This interface allows streaming and recording audio to an audio codec board. The Everest Semiconductor ES8388 audio codec was chosen because its supported by Arduino Audio Tools and Arduino Audio Driver and because Espressif created the Lyrat Audio modules with published reference designs. Sound is recorded with pui audio analog MEMS microphones AMM-2742 that are mounted on the printed circuit board. Two microphones are used where one is connected to the stethoscope and the other recording the background. An dual differential amplifier is used to low pass filter and amplify the signal from the microphone, however amplification would not be needed for the ES8388 codec. Pressure is measured with a Honeywell MPR pressure sensor MPRLS0300YG that convers the physiological range of 0 to 200 mm Hg.
 
 ## 🔗 Education Background
 
@@ -93,10 +93,10 @@ These are the links to the OnShape Design files, which you can edit and modify i
  
 ## Filter Design Software
 
-The software uses a digital high and low pass filter with cut on at 35Hz and cut off at 2kHz to improve sound quality. The coefficients are computed with a [python program](Compute_Filter_Coefficients[...]  
+The software uses a digital high and low pass filter with cut on at 35Hz and cut off at 2kHz to improve sound quality. The coefficients are computed with a [python program](Compute_Filter_Coefficients[...]
 
 The frequency content of the stethoscope audio was referenced with papers listed in the code's comment. 
 
 <a href="filter_responses.svg" target="_blank">
   <img src="filter_responses.svg" style="width: 600px;">
-</a>'
+</a>
